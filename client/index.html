@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Linux Remote Desktop Prototype</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!--
+    Simple client consuming the WebSocket stream of JPEG frames and sending back
+    mouse / keyboard events. This deliberately avoids heavy frameworks for readability.
+  -->
+  <h1>Linux Remote Desktop (Prototype)</h1>
+  <div id="status">Connecting...</div>
+
+  <div id="screen-container">
+    <img id="screen" alt="Remote Screen Stream" />
+  </div>
+
+  <div id="controls">
+    <label>Server URL:
+      <input id="serverUrl" type="text" value="ws://localhost:8765" />
+    </label>
+    <button id="connectBtn">Connect</button>
+    <button id="disconnectBtn" disabled>Disconnect</button>
+  </div>
+
+  <p class="note">
+    Note: Latency and quality depend on server settings (FPS, JPEG quality, scale).<br/>
+    For secure usage, tunnel the connection (e.g., SSH) or add authentication in a future version.
+  </p>
+
+  <script src="script.js"></script>
+</body>
+</html>

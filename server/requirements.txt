@@ -1,0 +1,14 @@
+# Python dependencies for the Linux Remote Desktop prototype.
+# Each library is selected for approachability and wide availability.
+#
+# mss        : Fast, cross-platform screen capture.
+# Pillow     : Image processing (convert raw frame to JPEG and resize).
+# websockets : Async WebSocket server implementation.
+# pyautogui  : Cross-platform automation for keyboard / mouse event injection.
+#
+# NOTE: For production-grade streaming, consider replacing JPEG frames with a video codec pipeline.
+
+mss==9.0.1
+Pillow==10.4.0
+websockets==12.0
+pyautogui==0.9.54
